@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled2/homeScreen.dart';
 
+import 'invoice.dart';
 import 'models/card.dart';
 
 void main(){
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget{
      return MaterialApp(
 
        debugShowCheckedModeBanner: false,
-       home: InvoicePage(
+       home: InvoicePreviewPage(
 
        ),
      )
