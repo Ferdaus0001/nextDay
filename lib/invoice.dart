@@ -18,13 +18,15 @@ class InvoicePreviewPage extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
       ),
-      body: Column(
-        children: [
-          // Image Preview Section
-          Expanded(
-            child: Padding(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            // Image Preview Section
+            Padding(
               padding: const EdgeInsets.all(16.0),
               child: Container(
+                width: 324,
+                height: 455,
                 padding: EdgeInsets.only(top: 12,bottom: 12,right: 11,left: 12),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
@@ -35,8 +37,8 @@ class InvoicePreviewPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                        width: 340,
-                        height: 526,
+                        width: 320,
+                        height: 420,
                         decoration: ShapeDecoration(
                           image: DecorationImage(
                             image: NetworkImage("https://th.bing.com/th?id=OIP.ALLqT1a9iLZLFjBKcKVsYAHaJl&w=219&h=284&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"),
@@ -52,32 +54,33 @@ class InvoicePreviewPage extends StatelessWidget {
                 ),
               ),
             ),
-          ),
-
-          // Save & Continue Button
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16),
-            child: SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.redAccent,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
+        
+            // Save & Continue Button
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16),
+              child: SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.redAccent,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    padding: EdgeInsets.symmetric(vertical: 16),
                   ),
-                  padding: EdgeInsets.symmetric(vertical: 16),
-                ),
-                onPressed: () {
-                  // Your save logic
-                },
-                child: Text(
-                  "Save & Continue",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.white),
+                  onPressed: () {
+                    // Your save logic
+                  },
+                  child: Text(
+                    "Save & Continue",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.white),
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+            SizedBox(height: 50,),
+          ],
+        ),
       ),
     );
   }
